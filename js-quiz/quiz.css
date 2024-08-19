@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgba(216, 190, 240, 0.603);
+	color: rgb(41, 27, 27);
+	font-family: Arial, sans-serif;
+	margin: 20px;
+}
+#quiz {
+	display: none;
+}
+.question {
+	margin-bottom: 20px;
+}
+.timer {
+	color: rgb(92, 63, 63);
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.controls {
+	margin-bottom: 20px;
+}
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+}
+.feedback {
+	font-weight: bold;
+	margin-left: 10px;
+}
+.correct {
+	color: green;
+}
+.wrong {
+	color: red;
+}

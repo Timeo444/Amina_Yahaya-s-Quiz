@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+
+    <h1>JavaScript Technical Quiz</h1>
+
+    <div class="timer" id="timer">Time left: 1:00:00</div>
+
+    <div class="controls">
+      <button id="startBtn">Start Quiz</button>
+      <button id="pauseBtn" disabled>Pause Quiz</button>
+    </div>
+
+    <form id="quiz">
+      <div class="question">
+        <p>1. Which API is used to find out a user's location?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="Geolocation API" /> Geolocation API</label><br />
+          <label><input type="radio" name="q1" value="Web Storage API" /> Web Storage API</label><br />
+          <label><input type="radio" name="q1" value="Canvas API" /> Canvas API</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. Which JavaScript API is used for making network requests?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="DOM API" /> DOM API</label><br />
+          <label><input type="radio" name="q2" value="Fetch API" /> Fetch API</label><br />
+          <label><input type="radio" name="q2" value="Web Storage API" /> Web Storage API</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>3. JavaScript can run on which of the following platforms?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="Browsers only" /> Browsers only</label><br />
+          <label><input type="radio" name="q3" value="Servers only" /> Servers only</label><br />
+          <label><input type="radio" name="q3" value="Browsers, Servers, and any device with a JS engine" /> Browsers, Servers, and any device with a JS engine</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>4. What is the purpose of the <code>defer</code> attribute in a <code>&lt;script&gt;</code> tag?</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="To load the script immediately" /> To load the script immediately</label><br />
+          <label><input type="radio" name="q4" value="To load the script after the HTML content is fully loaded" /> To load the script after the HTML content is fully loaded</label><br />
+          <label><input type="radio" name="q4" value="To prevent the script from running" /> To prevent the script from running</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>5. What is the difference between <code>let</code> and <code>const</code> in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="let allows re-assignment, const does not" /> let allows re-assignment, const does not</label><br />
+          <label><input type="radio" name="q5" value="const allows re-assignment, let does not" /> const allows re-assignment, let does not</label><br />
+          <label><input type="radio" name="q5" value="Both are the same" /> Both are the same</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>6. Which API allows you to manipulate the structure and content of a web page?</p>
+        <div class="options">
+          <label><input type="radio" name="q6" value="Geolocation API" /> Geolocation API</label><br />
+          <label><input type="radio" name="q6" value="Document Object Model (DOM) API" /> Document Object Model (DOM) API</label><br />
+          <label><input type="radio" name="q6" value="Web Storage API" /> Web Storage API</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>7. Which method of adding JavaScript is generally better for organizing code and making it reusable?</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="Inline JavaScript" /> Inline JavaScript</label><br />
+          <label><input type="radio" name="q7" value="Internal JavaScript" /> Internal JavaScript</label><br />
+          <label><input type="radio" name="q7" value="External JavaScript" /> External JavaScript</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>8. What is the term used when JavaScript automatically adds a semicolon at the end of a line?</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="Automatic line break" /> Automatic line break</label><br />
+          <label><input type="radio" name="q8" value="Implicit semicolon" /> Implicit semicolon</label><br />
+          <label><input type="radio" name="q8" value="Automatic semicolon insertion" /> Automatic semicolon insertion</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>9. What is the name of the JavaScript engine used in Safari?</p>
+        <div class="options">
+          <label><input type="radio" name="q9" value="V8" /> V8</label><br />
+          <label><input type="radio" name="q9" value="SpiderMonkey" /> SpiderMonkey</label><br />
+          <label><input type="radio" name="q9" value="SquirrelFish" /> SquirrelFish</label><br />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>10. Which JavaScript engine is used in Internet Explorer?</p>
+        <div class="options">
+          <label><input type="radio" name="q10" value="V8" /> V8</label><br />
+          <label><input type="radio" name="q10" value="Chakra" /> Chakra</label><br />
+          <label><input type="radio" name="q10" value="Nitro" /> Nitro</label><br />
+        </div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="question">
+        <p>11. What happens when you perform a mathematical operation involving `NaN`?</p>
+        <div class="options">
+          <label><input type="radio" name="question11" value="A" /> The result is always 0</label><br />
+          <label><input type="radio" name="question11" value="B" /> The result is always `NaN`</label><br />
+          <label><input type="radio" name="question11" value="C" /> The result depends on the other operand</label><br />
+          <label><input type="radio" name="question11" value="D" /> The script throws an error</label>
+        </div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="question">
+        <p>12. Which of the following represents the intentional absence of an object?</p>
+        <div class="options">
+          <label><input type="radio" name="question12" value="A" /> null</label><br />
+          <label><input type="radio" name="question12" value="B" /> undefined</label><br />
+          <label><input type="radio" name="question12" value="C" /> NaN</label><br />
+          <label><input type="radio" name="question12" value="D" /> false</label>
+        </div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="question">
+        <p>13. Which method is used to remove the last element from an array?</p>
+        <div class="options">
+          <label><input type="radio" name="question13" value="A" /> push()</label><br />
+          <label><input type="radio" name="question13" value="B" /> pop()</label><br />
+          <label><input type="radio" name="question13" value="C" /> shift()</
+
+label><br />
+          <label><input type="radio" name="question13" value="D" /> unshift()</label>
+        </div>
+      </div>
+
+      <!-- Question 14 -->
+      <div class="question">
+        <p>14. What will `typeof null` return in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question14" value="A" /> "null"</label><br />
+          <label><input type="radio" name="question14" value="B" /> "undefined"</label><br />
+          <label><input type="radio" name="question14" value="C" /> "object"</label><br />
+          <label><input type="radio" name="question14" value="D" /> "number"</label>
+        </div>
+      </div>
+
+      <!-- Question 15 -->
+      <div class="question">
+        <p>15. Which keyword is used to create a new object in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question15" value="A" /> `create`</label><br />
+          <label><input type="radio" name="question15" value="B" /> `new`</label><br />
+          <label><input type="radio" name="question15" value="C" /> `construct`</label><br />
+          <label><input type="radio" name="question15" value="D" /> `instantiate`</label>
+        </div>
+      </div>
+
+      <!-- Question 16 -->
+      <div class="question">
+        <p>16. What is the output of the following code?</p>
+        <pre>
+          <code>
+let x = [1, 2, 3];
+let y = x;
+y.push(4);
+console.log(x);
+          </code>
+        </pre>
+        <div class="options">
+          <label><input type="radio" name="question16" value="A" /> `[1, 2, 3]`</label><br />
+          <label><input type="radio" name="question16" value="B" /> `[1, 2, 3, 4]`</label><br />
+          <label><input type="radio" name="question16" value="C" /> `undefined`</label><br />
+          <label><input type="radio" name="question16" value="D" /> `[4]`</label>
+        </div>
+      </div>
+
+      <!-- Question 17 -->
+      <div class="question">
+        <p>17. Which operator is used to spread the elements of an array?</p>
+        <div class="options">
+          <label><input type="radio" name="question17" value="A" /> `...`</label><br />
+          <label><input type="radio" name="question17" value="B" /> `,`</label><br />
+          <label><input type="radio" name="question17" value="C" /> `::`</label><br />
+          <label><input type="radio" name="question17" value="D" /> `..`</label>
+        </div>
+      </div>
+
+      <!-- Question 18 -->
+      <div class="question">
+        <p>18. How do you declare a JavaScript function?</p>
+        <div class="options">
+          <label><input type="radio" name="question18" value="A" /> `function myFunc {}`</label><br />
+          <label><input type="radio" name="question18" value="B" /> `function myFunc()`</label><br />
+          <label><input type="radio" name="question18" value="C" /> `declare myFunc()`</label><br />
+          <label><input type="radio" name="question18" value="D" /> `func myFunc()`</label>
+        </div>
+      </div>
+
+      <!-- Question 19 -->
+      <div class="question">
+        <p>19. What does `JSON.parse()` do?</p>
+        <div class="options">
+          <label><input type="radio" name="question19" value="A" /> Converts a JavaScript object into a JSON string</label><br />
+          <label><input type="radio" name="question19" value="B" /> Converts a JSON string into a JavaScript object</label><br />
+          <label><input type="radio" name="question19" value="C" /> Parses a JSON object to check for errors</label><br />
+          <label><input type="radio" name="question19" value="D" /> Parses a JSON object and returns its length</label>
+        </div>
+      </div>
+
+      <!-- Question 20 -->
+      <div class="question">
+        <p>20. What is the purpose of the `return` statement in a function?</p>
+        <div class="options">
+          <label><input type="radio" name="question20" value="A" /> Stops the execution of the function</label><br />
+          <label><input type="radio" name="question20" value="B" /> Returns a value and stops the function</label><br />
+          <label><input type="radio" name="question20" value="C" /> Returns a value without stopping the function</label><br />
+          <label><input type="radio" name="question20" value="D" /> Returns a value and continues execution</label>
+        </div>
+      </div>
+
+      <!-- Question 21 -->
+      <div class="question">
+        <p>21. What is the use of `setTimeout()` in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question21" value="A" /> Executes a function repeatedly with a delay</label><br />
+          <label><input type="radio" name="question21" value="B" /> Executes a function once after a delay</label><br />
+          <label><input type="radio" name="question21" value="C" /> Sets the delay for a function to execute immediately</label><br />
+          <label><input type="radio" name="question21" value="D" /> Executes a function only if a condition is met</label>
+        </div>
+      </div>
+
+      <!-- Question 22 -->
+      <div class="question">
+        <p>22. Which method would you use to convert a string into an integer in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question22" value="A" /> `parseInt()`</label><br />
+          <label><input type="radio" name="question22" value="B" /> `Number()`</label><br />
+          <label><input type="radio" name="question22" value="C" /> `toInteger()`</label><br />
+          <label><input type="radio" name="question22" value="D" /> `toFixed()`</label>
+        </div>
+      </div>
+
+      <!-- Question 23 -->
+      <div class="question">
+        <p>23. What does the `===` operator do in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question23" value="A" /> Compares both value and type</label><br />
+          <label><input type="radio" name="question23" value="B" /> Compares only value</label><br />
+          <label><input type="radio" name="question23" value="C" /> Compares only type</label><br />
+          <label><input type="radio" name="question23" value="D" /> Compares value and ignores type</label>
+        </div>
+      </div>
+
+      <!-- Question 24 -->
+      <div class="question">
+        <p>24. Which of the following is a common way to handle errors in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question24" value="A" /> Using `try...catch`</label><br />
+          <label><input type="radio" name="question24" value="B" /> Using `if...else`</label><br />
+          <label><input type="radio" name="question24" value="C" /> Using `while...try`</label><br />
+          <label><input type="radio" name="question24" value="D" /> Using `if...catch`</label>
+        </div>
+      </div>
+
+      <!-- Question 25 -->
+      <div class="question">
+        <p>25. Which of the following is not a JavaScript framework?</p>
+        <div class="options">
+          <label><input type="radio" name="question25" value="A" /> React</label><br />
+          <label><input type="radio" name="question25" value="B" /> Angular</label><br />
+          <label><input type="radio" name="question25" value="C" /> Vue</label><br />
+          <label><input type="radio" name="question25" value="D" /> Python</label>
+        </div>
+      </div>
+
+      <!-- Question 26 -->
+      <div class="question">
+        <p>26. Which of the following is true about JavaScript?</
+
+p>
+        <div class="options">
+          <label><input type="radio" name="question26" value="A" /> JavaScript is a compiled language</label><br />
+          <label><input type="radio" name="question26" value="B" /> JavaScript is a statically typed language</label><br />
+          <label><input type="radio" name="question26" value="C" /> JavaScript can run both on the client and server</label><br />
+          <label><input type="radio" name="question26" value="D" /> JavaScript requires external libraries to run</label>
+        </div>
+      </div>
+
+      <!-- Question 27 -->
+      <div class="question">
+        <p>27. What is the purpose of the `return` statement in JavaScript functions?</p>
+        <div class="options">
+          <label><input type="radio" name="question27" value="A" /> To terminate the function's execution</label><br />
+          <label><input type="radio" name="question27" value="B" /> To return a value from the function</label><br />
+          <label><input type="radio" name="question27" value="C" /> To execute a specific piece of code within the function</label><br />
+          <label><input type="radio" name="question27" value="D" /> Both A and B</label>
+        </div>
+      </div>
+
+      <!-- Question 28 -->
+      <div class="question">
+        <p>28. Which event occurs when the user clicks on an HTML element?</p>
+        <div class="options">
+          <label><input type="radio" name="question28" value="A" /> `onmouseover`</label><br />
+          <label><input type="radio" name="question28" value="B" /> `onchange`</label><br />
+          <label><input type="radio" name="question28" value="C" /> `onclick`</label><br />
+          <label><input type="radio" name="question28" value="D" /> `onload`</label>
+        </div>
+      </div>
+
+      <!-- Question 29 -->
+      <div class="question">
+        <p>29. Which JavaScript method is used to access an HTML element by its ID?</p>
+        <div class="options">
+          <label><input type="radio" name="question29" value="A" /> `getElementByClassName()`</label><br />
+          <label><input type="radio" name="question29" value="B" /> `getElementById()`</label><br />
+          <label><input type="radio" name="question29" value="C" /> `getElementsByTagName()`</label><br />
+          <label><input type="radio" name="question29" value="D" /> `getElementsByName()`</label>
+        </div>
+      </div>
+
+      <!-- Question 30 -->
+      <div class="question">
+        <p>30. What does the `isNaN()` function do in JavaScript?</p>
+        <div class="options">
+          <label><input type="radio" name="question30" value="A" /> Checks if a value is a number</label><br />
+          <label><input type="radio" name="question30" value="B" /> Checks if a value is not a number</label><br />
+          <label><input type="radio" name="question30" value="C" /> Converts a value to a number</label><br />
+          <label><input type="radio" name="question30" value="D" /> Converts a number to a string</label>
+        </div>
+      </div>
+
+      <div class="submit-button">
+        <input type="submit" value="Submit" />
+      </div>
+
+    </form>
+  </body>
+</html>
